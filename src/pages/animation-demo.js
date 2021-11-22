@@ -38,7 +38,7 @@ const AnimationDemo = () => {
                 ref={playerRef}
                 lottieRef={instance => setLottieInstance(instance)}
                 mode="normal"
-                src="https://assets9.lottiefiles.com/private_files/lf30_kd6vmszk.json"
+                src="https://assets5.lottiefiles.com/packages/lf20_l4iwnspr.json"
                 style={{width: "320px"}}
             ></Player>
             {(isPlaying) ? <button onClick={() => onPauseClickHandler(playerRef,setIsPlaying)}>Pause</button> : <button onClick={() => onPlayClickHandler(playerRef,setIsPlaying)}>Play</button> }
