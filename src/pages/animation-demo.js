@@ -17,6 +17,12 @@ const onGoClickHandler = (ref,lottie,seekValue) => {
     //lottie.goToAndStop(seekValue+"%", false);
 }
 
+const onSegementClickHandler = (ref,lottie,seekValue) => {
+    //ref.current.setSeeker(seekValue);
+    //lottie.goToAndStop(seekValue+"%", false);
+    lottie.playSegments([0,50],true);
+}
+
 const onPlayListener = (event) => {
     console.log("animation play started");
 }
@@ -44,6 +50,7 @@ const AnimationDemo = () => {
             {(isPlaying) ? <button onClick={() => onPauseClickHandler(playerRef,setIsPlaying)}>Pause</button> : <button onClick={() => onPlayClickHandler(playerRef,setIsPlaying)}>Play</button> }
             Go to timeline: <input type="number" min="0" max="100" value={seekValue} onChange={e => setSeekValue(e.target.value) }/>
             <button onClick={() => onGoClickHandler(playerRef,lottie,seekValue)}>Go</button>
+            <button onClick={() => onSegementClickHandler(playerRef,lottie,seekValue)}>Play segement</button>
         </Layout>
     )
 }
